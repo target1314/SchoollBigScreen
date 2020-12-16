@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_height_wrap"
+    android:layout_marginLeft="20.0dip"
+    android:layout_marginRight="20.0dip"
+    android:background="@drawable/background_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="15.0dip"
+        android:text="提示"
+        android:textColor="@color/text_color_black"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        style="@style/layout_height_wrap"
+        android:layout_margin="50.0dip"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBarShow"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:progress="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_dialog_tipText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120.0dip"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <include layout="@layout/activity_line_horizontal" />
+
+    <LinearLayout
+        style="@style/layout_height_wrap"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            style="@style/layout_height_wrap"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_button_dialog_left"
+            android:gravity="center"
+            android:layout_height="80.0dip"
+            android:focusable="true"
+            android:text="取消"
+            android:textColor="@color/text_color_blue"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/divider_gray" />
+
+        <Button
+            android:id="@+id/dialog_ok"
+            style="@style/layout_height_wrap"
+            android:layout_weight="1.0"
+            android:layout_height="80.0dip"
+            android:background="@drawable/selector_button_dialog_right"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_color_blue"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
